@@ -1,11 +1,19 @@
 let display = document.getElementById("display");
+let historyList = document.getElementById("historyList");
 
 function appendValue(value){
+
+let last = display.value.slice(-1);
+
+if(["+","-","*","/"].includes(last) && ["+","-","*","/"].includes(value)){
+return;
+}
+
 display.value += value;
 }
 
 function clearDisplay(){
-display.value = "";
+display.value="";
 }
 
 function deleteLast(){
@@ -13,32 +21,51 @@ display.value = display.value.slice(0,-1);
 }
 
 function calculate(){
+
 try{
-display.value = eval(display.value);
-}
-catch{
-display.value = "Error";
-}
+
+let expression = display.value;
+let result = eval(expression);
+
+display.value = result;
+
+let li = document.createElement("li");
+li.textContent = expression + " = " + result;
+
+historyList.prepend(li);
+
 }
 
-document.addEventListener("keydown", function(event){
+catch{
+display.value="Error";
+}
+
+}
+
+document.addEventListener("keydown",(event)=>{
 
 let key = event.key;
 
-if(!isNaN(key) || ["+", "-", "*", "/", "."].includes(key)){
+if(!isNaN(key) || ["+","-","*","/","."].includes(key)){
 display.value += key;
 }
 
-if(key === "Enter"){
+if(key==="Enter"){
 calculate();
 }
 
-if(key === "Backspace"){
+if(key==="Backspace"){
 deleteLast();
 }
 
-if(key === "Escape"){
+if(key==="Escape"){
 clearDisplay();
 }
 
 });
+
+function toggleMode(){
+
+document.body.classList.toggle("light");
+
+}

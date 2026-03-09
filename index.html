@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculator</title>
+<title>Advanced Calculator</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div class="container">
+
 <div class="calculator">
+
+<div class="top-bar">
+<button onclick="toggleMode()">🌙</button>
+</div>
 
 <input type="text" id="display" disabled>
 
@@ -35,10 +40,17 @@
 <button onclick="appendValue('3')">3</button>
 <button onclick="appendValue('+')">+</button>
 
-<button onclick="appendValue('0')">0</button>
+<button class="zero" onclick="appendValue('0')">0</button>
 <button onclick="appendValue('.')">.</button>
-<button onclick="calculate()">=</button>
+<button class="equal" onclick="calculate()">=</button>
 
+</div>
+
+</div>
+
+<div class="history">
+<h3>History</h3>
+<ul id="historyList"></ul>
 </div>
 
 </div>
