@@ -20,3 +20,25 @@ catch{
 display.value = "Error";
 }
 }
+
+document.addEventListener("keydown", function(event){
+
+let key = event.key;
+
+if(!isNaN(key) || ["+", "-", "*", "/", "."].includes(key)){
+display.value += key;
+}
+
+if(key === "Enter"){
+calculate();
+}
+
+if(key === "Backspace"){
+deleteLast();
+}
+
+if(key === "Escape"){
+clearDisplay();
+}
+
+});
