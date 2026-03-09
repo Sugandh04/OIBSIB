@@ -1,11 +1,12 @@
 body{
-font-family: Arial;
-background: linear-gradient(135deg,#1d2671,#c33764);
+font-family: Arial, sans-serif;
+background:black;
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 color:white;
+transition:0.3s;
 }
 
 .container{
@@ -93,4 +94,25 @@ padding:0;
 .history li{
 margin-bottom:5px;
 font-size:14px;
+}
+body.light{
+background:#f4f4f4;
+color:black;
+}
+
+body.light .calculator{
+background:rgba(0,0,0,0.05);
+}
+
+body.light button{
+background:rgba(0,0,0,0.1);
+color:black;
+}
+
+body.light button:hover{
+background:rgba(0,0,0,0.2);
+}
+
+body.light .history{
+background:rgba(0,0,0,0.05);
 }

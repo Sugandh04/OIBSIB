@@ -66,6 +66,15 @@ clearDisplay();
 
 function toggleMode(){
 
-document.body.classList.toggle("light");
+let body = document.body;
+let button = document.querySelector(".top-bar button");
+
+body.classList.toggle("light");
+
+if(body.classList.contains("light")){
+button.textContent = "☀";
+}else{
+button.textContent = "🌙";
+}
 
 }
