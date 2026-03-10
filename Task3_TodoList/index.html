@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart To-Do</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+
+            <h1>My Tasks</h1>
+
+            <div class="controls">
+
+                <input id="search" placeholder="Search tasks">
+
+                <select id="filter">
+                    <option value="all">All</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <button id="themeToggle">🌙</button>
+
+            </div>
+
+        </header>
+
+
+        <div class="add-task">
+
+            <input id="taskInput" placeholder="Add a task">
+
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <button onclick="addTask()">Add</button>
+
+        </div>
+
+
+        <div class="progress-container">
+
+            <div class="progress-bar" id="progressBar"></div>
+
+        </div>
+
+
+        <div class="lists">
+
+            <div class="list">
+
+                <h2>Pending (<span id="pendingCount"></span>)</h2>
+
+                <ul id="pending"></ul>
+
+            </div>
+
+
+            <div class="list">
+
+                <h2>Completed (<span id="completedCount"></span>)</h2>
+
+                <ul id="completed"></ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f1115;
+    color: #e4e6eb;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.app {
+    width: 100%;
+    max-width: 900px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+input,
+select {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #1c1f26;
+    color: #eee;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #4a90e2;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+.add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.list {
+    background: #1c1f26;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    background: #252932;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: grab;
+}
+
+.priority-high {
+    border-left: 4px solid #ff6b6b;
+}
+
+.priority-medium {
+    border-left: 4px solid #f7b267;
+}
+
+.priority-low {
+    border-left: 4px solid #6bcf8c;
+}
+
+.task-actions {
+    margin-top: 8px;
+    display: flex;
+    gap: 6px;
+}
+
+.timestamp {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.progress-container {
+    height: 8px;
+    background: #1c1f26;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #6bcf8c;
+    transition: width .3s;
+}
+
+/* LIGHT MODE */
+
+body.light {
+    background: #f4f6f8;
+    color: #222;
+}
+
+body.light input,
+body.light select {
+    background: white;
+    color: black;
+}
+
+body.light .list {
+    background: white;
+}
+
+body.light li {
+    background: #f0f2f5;
+}
+
+@media(max-width:750px) {
+
+    .lists {
+        grid-template-columns: 1fr;
+    }
+
+}
