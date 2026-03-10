@@ -1,14 +1,14 @@
-const sections = document.querySelectorAll(".fade");
+const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
 
-sections.forEach(section => {
+reveals.forEach(section => {
 
-const position = section.getBoundingClientRect().top;
-const screenPosition = window.innerHeight / 1.2;
+const windowHeight = window.innerHeight;
+const elementTop = section.getBoundingClientRect().top;
 
-if(position < screenPosition){
-section.classList.add("show");
+if(elementTop < windowHeight - 100){
+section.classList.add("active");
 }
 
 });
