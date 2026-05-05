@@ -1,30 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Dashboard</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Mega Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body class="dashboard-page">
+    <div id="toast-container"></div>
+    <!-- Animated Background Shapes -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="sidebar-header">
+                <div class="logo"><i class="fas fa-cube"></i> Nexus</div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i> Overview
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-tasks"></i> Smart Tasks
+                </a>
+                <a href="#" class="nav-item" onclick="showToast('Analytics is a premium feature.', 'info')">
+                    <i class="fas fa-chart-pie"></i> Analytics
+                </a>
+                <a href="#" class="nav-item" onclick="showToast('Settings opened.', 'info')">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </nav>
 
-<body>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar"><i class="fas fa-user"></i></div>
+                    <div class="user-info">
+                        <span id="userEmailDisplay">user@example.com</span>
+                        <span class="role">Pro Member</span>
+                    </div>
+                </div>
+                <button onclick="logout()" class="btn-logout" title="Log Out">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </aside>
 
-<div class="dashboard">
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header glass-panel">
+                <div class="welcome-msg">
+                    <h1>Welcome Back, <span id="userName">User</span> 👋</h1>
+                    <p>Here is what's happening with your projects today.</p>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn" onclick="showToast('No new notifications.', 'info')"><i class="far fa-bell"></i></button>
+                </div>
+            </header>
 
-<h1>Welcome 🎉</h1>
+            <div class="dashboard-widgets" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <!-- Dummy Widget 1 -->
+                <div class="widget glass-panel" style="padding: 20px;">
+                    <div class="widget-header" style="border-bottom: 1px solid var(--glass-border); padding-bottom: 10px; margin-bottom: 15px;">
+                        <h2><i class="fas fa-chart-line"></i> Activity</h2>
+                    </div>
+                    <div class="widget-body" style="color: var(--text-secondary);">
+                        <p>Your recent activity will appear here.</p>
+                    </div>
+                </div>
+                
+                <!-- Dummy Widget 2 -->
+                <div class="widget glass-panel" style="padding: 20px;">
+                    <div class="widget-header" style="border-bottom: 1px solid var(--glass-border); padding-bottom: 10px; margin-bottom: 15px;">
+                        <h2><i class="fas fa-users"></i> Team</h2>
+                    </div>
+                    <div class="widget-body" style="color: var(--text-secondary);">
+                        <p>No active team members.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
-<p>You have successfully logged in.</p>
-
-<button onclick="logout()">Logout</button>
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

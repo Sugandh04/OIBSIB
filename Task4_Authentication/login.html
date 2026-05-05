@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Login</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Secure Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body class="auth-page">
+    <div id="toast-container"></div>
 
-<body>
+    <div class="split-container">
+        <!-- Left Side: Image / Branding -->
+        <div class="split-left">
+            <div class="branding">
+                <div class="logo"><i class="fas fa-cube"></i> Nexus</div>
+                <h1>Welcome Back.</h1>
+                <p>Log in to access your unified mega dashboard and productivity tools.</p>
+            </div>
+            <!-- Decorative shapes -->
+            <div class="glass-orb orb-1"></div>
+            <div class="glass-orb orb-2"></div>
+        </div>
 
-<div class="auth-container">
+        <!-- Right Side: Form -->
+        <div class="split-right">
+            <div class="auth-box glass-panel">
+                <h2>Sign In</h2>
+                <p class="subtitle">Enter your credentials to continue</p>
 
-<h2>Login</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <i class="far fa-envelope icon"></i>
+                        <input id="loginEmail" type="email" placeholder="Email Address" required>
+                    </div>
 
-<form id="loginForm">
+                    <div class="input-group">
+                        <i class="fas fa-lock icon"></i>
+                        <input id="loginPassword" type="password" placeholder="Password" required minlength="6">
+                        <i class="far fa-eye toggle-password" onclick="togglePasswordVisibility('loginPassword', this)"></i>
+                    </div>
 
-<input id="loginEmail" type="email" placeholder="Email" required>
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
 
-<input id="loginPassword" type="password" placeholder="Password" required minlength="6">
+                    <button type="submit" class="btn-primary">
+                        Login <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
 
-<button type="submit">Login</button>
+                <div class="social-login">
+                    <p>Or continue with</p>
+                    <div class="social-btns">
+                        <button class="btn-social" type="button" onclick="showToast('Google login is a mock feature.', 'info')">
+                            <i class="fab fa-google"></i> Google
+                        </button>
+                        <button class="btn-social" type="button" onclick="showToast('GitHub login is a mock feature.', 'info')">
+                            <i class="fab fa-github"></i> GitHub
+                        </button>
+                    </div>
+                </div>
 
-</form>
+                <p class="auth-switch">Don't have an account? <a href="register.html">Create one</a></p>
+            </div>
+        </div>
+    </div>
 
-<p>Don't have an account? <a href="register.html">Register</a></p>
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
