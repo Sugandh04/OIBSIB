@@ -1,195 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sundar Pichai Tribute</title>
-
+    <title>Sundar Pichai | Visionary Tech Leader</title>
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-
-    <nav>
-
-        <h2 class="logo">Tribute</h2>
-
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#products">Products</a>
-            <a href="#timeline">Journey</a>
-            <a href="#quote">Quote</a>
+    <!-- Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <nav id="navbar">
+        <h2 class="logo">Pichai.</h2>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
         </div>
-
+        <div class="nav-links" id="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#achievements" class="nav-link">Achievements</a>
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#timeline" class="nav-link">Journey</a>
+            <a href="#quote" class="nav-link">Quote</a>
+        </div>
     </nav>
 
-
-    <header class="hero">
-
-        <div class="hero-content">
-
+    <header class="hero" id="hero">
+        <div class="hero-content reveal">
+            <p class="tagline">Visionary. Leader. Innovator.</p>
             <h1 class="gradient-text">Sundar Pichai</h1>
-
-            <p>Leading Google into the future of AI, cloud computing and global technology</p>
-
+            <p class="subtitle">Leading Google into the future of AI, cloud computing, and global technology, reshaping how the world connects.</p>
+            <a href="#about" class="cta-btn">Discover His Journey <i class="fas fa-arrow-right"></i></a>
         </div>
-
+        <div class="hero-image reveal" style="transition-delay: 200ms;">
+            <div class="image-wrapper glass-panel">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Sundar_Pichai_2023.jpg" alt="Sundar Pichai Portrait" class="portrait">
+            </div>
+        </div>
     </header>
 
-
-
-    <section id="about" class="about reveal">
-
-        <div class="about-container">
-
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Sundar_Pichai_2023.jpg" alt="Sundar Pichai">
-
-            <div class="about-text">
-
-                <h2>About Sundar Pichai</h2>
-
-                <p>
-                    Sundar Pichai is the CEO of Alphabet and Google. Born in India, he joined Google in 2004 and quickly
-                    became one of the most influential leaders in the tech industry.
-                </p>
-
-                <p>
-                    He played a key role in launching products used by billions of people worldwide including Chrome,
-                    Android, and Google Drive.
-                </p>
-
+    <main>
+        <section id="about" class="about">
+            <div class="about-container reveal">
+                <div class="about-image glass-panel">
+                    <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&q=80&w=800" alt="Google Campus Abstract">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">About the <span>CEO</span></h2>
+                    <p>
+                        Born in Madurai, India, Sundar Pichai's journey to the top of Silicon Valley is a testament to perseverance and brilliance. He joined Google in 2004, initially leading product management for Google's client software products.
+                    </p>
+                    <p>
+                        Today, as the CEO of Alphabet and Google, he is steering the company through the complex new frontiers of artificial intelligence, quantum computing, and sustainable technology.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item glass-panel">
+                            <h3>20+</h3>
+                            <p>Years at Google</p>
+                        </div>
+                        <div class="stat-item glass-panel">
+                            <h3>Billion+</h3>
+                            <p>Users Impacted</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-        </div>
-
-    </section>
-
-
-
-    <section id="achievements" class="achievements reveal">
-
-        <h2>Major Achievements</h2>
-
-        <div class="card-grid">
-
-            <div class="card">
-                <h3>2004</h3>
-                <p>Joined Google and worked on Google Toolbar.</p>
+        <section id="achievements" class="achievements">
+            <h2 class="section-title reveal">Key <span>Milestones</span></h2>
+            <div class="card-grid">
+                <div class="card reveal glass-panel">
+                    <div class="card-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3>2004</h3>
+                    <p>Joined Google, leading development on the Google Toolbar.</p>
+                </div>
+                <div class="card reveal glass-panel" style="transition-delay: 100ms;">
+                    <div class="card-icon"><i class="fab fa-chrome"></i></div>
+                    <h3>2008</h3>
+                    <p>Spearheaded the successful launch of Google Chrome.</p>
+                </div>
+                <div class="card reveal glass-panel" style="transition-delay: 200ms;">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>2015</h3>
+                    <p>Appointed as the Chief Executive Officer of Google.</p>
+                </div>
+                <div class="card reveal glass-panel" style="transition-delay: 300ms;">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>2019</h3>
+                    <p>Promoted to CEO of Alphabet Inc., Google's parent company.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="card">
-                <h3>2008</h3>
-                <p>Led the creation of Google Chrome.</p>
+        <section id="products" class="products">
+            <h2 class="section-title reveal">Products <span>Led</span></h2>
+            <div class="product-grid">
+                <div class="product-card reveal glass-panel">
+                    <i class="fab fa-chrome product-icon chrome"></i>
+                    <h3>Chrome</h3>
+                    <p>Revolutionized web browsing with speed and simplicity.</p>
+                </div>
+                <div class="product-card reveal glass-panel" style="transition-delay: 100ms;">
+                    <i class="fab fa-android product-icon android"></i>
+                    <h3>Android</h3>
+                    <p>Oversaw the ecosystem of the popular mobile operating system.</p>
+                </div>
+                <div class="product-card reveal glass-panel" style="transition-delay: 200ms;">
+                    <i class="fas fa-envelope product-icon gmail"></i>
+                    <h3>Gmail</h3>
+                    <p>Enhanced the email experience with smart, scalable features.</p>
+                </div>
+                <div class="product-card reveal glass-panel" style="transition-delay: 300ms;">
+                    <i class="fab fa-google-drive product-icon drive"></i>
+                    <h3>Drive</h3>
+                    <p>Unified cloud storage, making seamless collaboration a reality.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="card">
-                <h3>2015</h3>
-                <p>Became CEO of Google.</p>
+        <section id="timeline" class="timeline">
+            <h2 class="section-title reveal">The <span>Journey</span></h2>
+            <div class="timeline-container">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <h3>1972</h3>
+                        <h4>Humble Beginnings</h4>
+                        <p>Born in Madurai, Tamil Nadu, India. Showed an early aptitude for numbers and engineering.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <h3>1993</h3>
+                        <h4>Academic Excellence</h4>
+                        <p>Earned his degree from IIT Kharagpur, followed by an MS from Stanford.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <h3>2004</h3>
+                        <h4>The Google Era</h4>
+                        <p>Joined Google just before its IPO, leading product management for crucial software.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <h3>2015</h3>
+                        <h4>Reaching the Summit</h4>
+                        <p>Stepped up as CEO of Google following the Alphabet restructuring.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="card">
-                <h3>2019</h3>
-                <p>Became CEO of Alphabet.</p>
+        <section id="quote" class="quote reveal">
+            <div class="quote-container glass-panel">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <blockquote>
+                    "Keep pushing your limits. Don't settle for what you think you deserve."
+                </blockquote>
+                <p class="quote-author">- Sundar Pichai</p>
             </div>
-
-        </div>
-
-    </section>
-
-
-
-    <section id="products" class="products reveal">
-
-        <h2>Products Led By Him</h2>
-
-        <div class="product-grid">
-
-            <div class="product-card">
-                <h3>Chrome</h3>
-                <p>The world's most widely used web browser.</p>
-            </div>
-
-            <div class="product-card">
-                <h3>Android</h3>
-                <p>The most popular mobile operating system.</p>
-            </div>
-
-            <div class="product-card">
-                <h3>Gmail</h3>
-                <p>One of the most widely used email platforms.</p>
-            </div>
-
-            <div class="product-card">
-                <h3>Google Drive</h3>
-                <p>Cloud storage used by millions worldwide.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <section id="timeline" class="timeline reveal">
-
-        <h2>Career Journey</h2>
-
-        <div class="timeline-container">
-
-            <div class="timeline-item">
-                <h3>2004</h3>
-                <p>Joined Google.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2008</h3>
-                <p>Chrome browser launched.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2015</h3>
-                <p>Appointed CEO of Google.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2019</h3>
-                <p>Promoted to CEO of Alphabet.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <section id="quote" class="quote reveal">
-
-        <h2>Inspirational Quote</h2>
-
-        <p>
-            "Keep pushing your limits. Don't settle for what you think you deserve."
-        </p>
-
-    </section>
-
-
+        </section>
+    </main>
 
     <footer>
-
-        <p>Tribute Page | Oasis Infobyte Internship Project</p>
-
+        <div class="footer-content">
+            <h2 class="logo">Pichai.</h2>
+            <p>A tribute to a visionary tech leader.</p>
+            <p class="credits">Oasis Infobyte Internship Project</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tribute Page. All Rights Reserved.</p>
+        </div>
     </footer>
 
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
